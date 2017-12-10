@@ -1,0 +1,174 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2017 Barracks Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+.manage-version {
+  background: $gray-100;
+  height: 100%;
+  margin: 0;
+  position: relative;
+
+  .info {
+    background: $white;
+    flex: 1 1 auto;
+
+    @media ($breakpoint-min-md) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-content: stretch;
+      align-items: stretch;
+      border-bottom: 2px solid $gray-100;
+    }
+
+    & > div {
+      padding: 20px 40px 40px;
+
+      @media ($breakpoint-max-md) {
+        & + div {
+          border-top: 2px solid $gray-100;
+        }
+      }
+
+      @media ($breakpoint-min-md) {
+        flex: 1 1 50%;
+
+        & + div {
+          border-left: 2px solid $gray-100;
+        }
+      }
+    }
+  }
+
+  form {
+
+    > div {
+      position: relative;
+    }
+
+    .group {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-content: stretch;
+      align-items: stretch;
+
+      .version-id {
+        flex: 1 1 auto;
+        margin-right: 40px;
+      }
+
+      .version-file {
+        flex: 0 0 auto;
+      }
+    }
+
+    .form-item {
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      padding: 16px 0 4px;
+
+      label {
+        font-size: inherit;
+      }
+    }
+
+    input,
+    textarea {
+      background: $gray-100;
+      border: 1px solid $gray-300;
+      display: block;
+      padding: 16px;
+    }
+
+    .version-file {
+      input {
+        width: .1px;
+        height: .1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .btn {
+        font-size: 18px;
+        min-width: auto;
+        padding: 16px 16px;
+        text-transform: none;
+
+        span {
+          display: inline-block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 130px;
+        }
+      }
+    }
+
+    .form__submit {
+      margin: 20px 0;
+    }
+  }
+
+  progress {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border-radius: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    height: 4px;
+    width: 100%;
+  }
+
+  progress::-webkit-progress-bar {
+    background-color: transparent;
+  }
+
+  progress::-webkit-progress-value {
+    background-color: $green-500;
+    transition: all .3s ease-out;
+  }
+
+  .btn-group {
+    padding: 0 40px;
+
+    .btn {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      margin-left: 10px;
+      min-width: 0;
+      white-space: nowrap;
+      padding: 12px 14px;
+    }
+  }
+}

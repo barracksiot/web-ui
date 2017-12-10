@@ -1,0 +1,234 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2017 Barracks Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+.list {
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start; */
+
+  .table {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    table {
+      border-collapse: collapse;
+      margin: 16px 40px;
+      /* table-layout: auto; */
+      width: calc(100% - 80px);
+    }
+
+    thead {
+      border-bottom: 1px solid $gray-300;
+
+      .bulk input {
+        vertical-align: 1px;
+      }
+    }
+
+    tbody {
+      tr {
+        &:hover,
+        &:focus {
+          th,
+          td {
+            background: rgba($gray-300, .5);
+
+            &:first-child,
+            &:last-child {
+              &:before {
+                background: rgba($gray-300, .5);
+              }
+            }
+          }
+        }
+
+        th,
+        td {
+          background: $white;
+          position: relative;
+
+          &[data-clickable="true"] {
+            cursor: pointer;
+            transition: all .3s ease-out;
+
+            &::after {
+              color: rgba($gray-500, .5);
+              content: '\f105';
+              display: inline-block;
+              font-family: fontawesome;
+              font-size: 14px;
+              margin-left: 6px;
+              transition: all .3s ease-out;
+            }
+
+            &:hover {
+              &::after {
+                color: $gray-500;
+              }
+            }
+          }
+
+          &:first-child,
+          &:last-child {
+            &::before {
+              background: $white;
+              bottom: 0;
+              content: '';
+              display: block;
+              position: absolute;
+              top: 0;
+              transition: all .3s ease-out;
+              width: 40px;
+            }
+          }
+
+          &:first-child {
+            &:before {
+              left: -40px;
+            }
+          }
+
+          &:last-child {
+            &:before {
+              right: -40px;
+            }
+          }
+        }
+      }
+
+      tr:nth-child(even) {
+        &:hover,
+        &:focus {
+          th,
+          td {
+            background: rgba($gray-300, .5);
+
+            &:first-child,
+            &:last-child {
+              &:before {
+                background: rgba($gray-300, .5);
+              }
+            }
+          }
+        }
+
+        th,
+        td {
+          background: rgba($gray-100, .75);
+
+          &:first-child,
+          &:last-child {
+            &:before {
+              background: rgba($gray-100, .75);
+            }
+          }
+        }
+      }
+    }
+
+    th,
+    td {
+      text-align: left;
+      transition: all .3s ease-out;
+      white-space: nowrap;
+    }
+
+    th {
+      color: $black;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 0 60px 0 0;
+      text-transform: uppercase;
+      vertical-align: baseline;
+
+      &[data-sortable] {
+        cursor: pointer;
+
+        &:after {
+          background: url('/images/arrow-sort.png') no-repeat center;
+          background-size: cover;
+          content: '';
+          display: inline-block;
+          height: 8px;
+          margin-left: 6px;
+          opacity: 0;
+          transition: all .3s ease-out;
+          width: 6px;
+        }
+
+
+        &[data-direction="ASC"] {
+          &:hover:after {
+            transform: rotate(180deg);
+          }
+        }
+
+        &[data-direction="DESC"] {
+          &:after {
+            transform: rotate(180deg);
+          }
+
+           &:hover:after {
+            transform: rotate(0deg);
+          }
+        }
+
+        &:hover:after,
+        &[data-direction]:after {
+          opacity: 1;
+        }
+      }
+
+      &.full {
+        width: 100%;
+      }
+    }
+
+    td {
+      color: $gray-600;
+      font-size: 18px;
+      padding: 6px 60px 10px 0;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    .bulk {
+      padding: 0 20px;
+      text-align: center;
+
+      input {
+        vertical-align: 2px;
+      }
+    }
+
+    .empty {
+      padding: 20px 0;
+      text-align: center;
+    }
+  }
+}

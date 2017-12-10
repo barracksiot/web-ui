@@ -1,0 +1,276 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2017 Barracks Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  flex: 0 0 auto;
+  background: $green-900;
+  height: 100%;
+  overflow: hidden;
+  width: 175px;
+
+  @media ($breakpoint-max-md) {
+    flex-direction: row;
+    height: 85px;
+    overflow: visible;
+    position: fixed;
+    width: 100%;
+    z-index: 6;
+  }
+
+  h1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    background: $green-500;
+    color: $white;
+    flex: 0 0 85px;
+    font-size: 25px;
+    line-height: 1em;
+    padding-bottom: 4px;
+
+    @media ($breakpoint-max-md) {
+      align-items: baseline;
+      flex: 1 0 auto;
+      font-size: 40px;
+      padding: 0 10px 0 30px;
+      position: relative;
+      z-index: 6;
+    }
+  }
+
+  .switch {
+    background: $green-500;
+    color: $white;
+    display: none;
+    height: 85px;
+    width: 100px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 6;
+
+    span {
+      display: block;
+      position: absolute;
+      height: 5px;
+      width: 40px;
+      background: $white;
+      border-radius: 4px;
+      opacity: 1;
+      right: 30px;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 26px;
+        transform-origin: left center;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: left center;
+      }
+
+      &:nth-child(3) {
+        bottom: 26px;
+        transform-origin: left center;
+      }
+    }
+
+    &[data-status="mobileNavVisible"] {
+      span {
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          top: 28px;
+          left: 36px;
+        }
+
+        &:nth-child(2) {
+          width: 0%;
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          top: 57px;
+          left: 36px;
+        }
+      }
+    }
+
+    @media ($breakpoint-max-md) {
+      display: block;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: stretch;
+    height: 100%;
+    padding-top: 20px;
+
+    @media ($breakpoint-max-md) {
+      background: $green-900;
+      display: flex;
+      height: 100vh;
+      justify-content: space-around;
+      left: 0;
+      opacity: 1;
+      overflow: auto;
+      padding-top: 85px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      transition: .5s ease-out all;
+      z-index: 5;
+
+      &.mobileNavInvisible {
+        opacity: 0;
+        top: -100%;
+      }
+    }
+
+    a,
+    button {
+      background: none;
+      border: none;
+      color: $white;
+      cursor: pointer;
+      display: block;
+      font-size: 14px;
+      line-height: 1.5em;
+      padding: 5px 10px 5px 30px;
+      position: relative;
+      text-align: left;
+      text-transform: uppercase;
+      width: 100%;
+
+      @media ($breakpoint-max-md) {
+        font-size: 30px;
+        line-height: 1.2em;
+        margin: 40px 0;
+        padding: 10px;
+        text-align: center;
+      }
+
+      @media ($breakpoint-max-sm) {
+        font-size: 20px;
+        margin: 20px 0;
+      }
+
+      &:hover,
+      &:focus,
+      &.current {
+        color: $green-500;
+        text-decoration: none;
+      }
+
+      &.current {
+        span {
+          background: $green-900;
+          padding-right: 15px;
+          position: relative;
+          z-index: 1;
+
+          @media ($breakpoint-max-md) {
+            padding: 0 15px;
+          }
+        }
+
+        &::before {
+          background: $green-500;
+          content: '';
+          display: block;
+          height: 1px;
+          left: 30px;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+
+          @media ($breakpoint-max-md) {
+            right: 30px;
+          }
+        }
+      }
+
+      .fa {
+        margin-left: 6px;
+        vertical-align: -1px;
+      }
+
+      &[data-action="logout"] {
+        color: $green-700;
+
+        &:hover,
+        &:focus,
+        &.current {
+          color: $green-500;
+        }
+      }
+    }
+  }
+
+  .version {
+    margin-top: 10px;
+    border-top: 1px solid rgba($green-700, .5);
+    padding-bottom: 2px;
+
+    button {
+      text-transform: none;
+      font-size: 12px;
+      letter-spacing: 1px;
+
+      &.experimental {
+        color: $orange-500;
+
+        &:hover {
+          color: $orange-300;
+        }
+      }
+    }
+
+    span {
+        &.version-number {
+          margin-left: 1px;
+          font-size: 14px;
+        }
+    }
+  }
+}

@@ -1,0 +1,261 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2017 Barracks Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+.dashboard {
+  background: linear-gradient(to bottom, rgba($white, 1) 0%,rgba($gray-100, 1) 100%);
+  height: 100%;
+  position: relative;
+
+  .statistics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: stretch;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &--empty {
+      align-items: stretch;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+
+      .item {
+        padding: 40px 20px 0 20px;
+        text-align: center;
+
+        &:last-child {
+          padding-bottom: 20px;
+        }
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5em;
+      }
+
+      iframe {
+        border: none;
+        max-width: 100%;
+      }
+
+      .actions {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
+
+        & > div {
+          padding: 20px 60px;
+        }
+
+        .fa {
+          font-size: 14px;
+          margin-left: 6px;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+
+        .btn {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .statistic {
+      &--pie {
+        margin: 40px 20px;
+        text-align: center;
+        width: 480px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
+
+        h2 {
+          a {
+            color: $black;
+
+            &:hover,
+            &:focus {
+              color: $green-900;
+              text-decoration: none;
+            }
+          }
+        }
+
+        .item {
+          text-align: center;
+          width: 100%;
+
+          .pie {
+            height: 500px;
+
+            & > div {
+              display: flex;
+              flex-direction: column;
+              flex-wrap: nowrap;
+              justify-content: space-around;
+              align-content: stretch;
+              align-items: stretch;
+            }
+
+            .amcharts-chart-div a {
+              opacity: 0.3 !important;
+            }
+          }
+        }
+
+        .legend {
+          background: transparent !important;
+          font-size: 16px;
+          margin: -50px 10px 0 10px;
+          order: 1;
+          width: auto !important;
+
+          & > div {
+            display: inline-block !important;
+            float: none !important;
+          }
+
+          div:first-child {
+            height: 10px !important;
+            width: 10px !important;
+          }
+        }
+      }
+
+      &--diagram {
+        margin: 40px 20px;
+        text-align: center;
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
+
+        h2 {
+          margin-bottom: 20px;
+
+          a {
+            color: $black;
+
+            &:hover,
+            &:focus {
+              color: $green-900;
+              text-decoration: none;
+            }
+          }
+        }
+
+        .item {
+          text-align: center;
+          width: 100%;
+
+          .diagram {
+            height: 300px;
+
+            & > div {
+              display: flex;
+              flex-direction: column;
+              flex-wrap: nowrap;
+              justify-content: space-around;
+              align-content: stretch;
+              align-items: stretch;
+            }
+
+            .amcharts-chart-div a {
+              opacity: 0.3 !important;
+            }
+          }
+        }
+
+        .legend {
+          background: transparent !important;
+          font-size: 16px;
+          margin: -50px 10px 0 10px;
+          order: 1;
+          width: auto !important;
+
+          & > div {
+            display: inline-block !important;
+            float: none !important;
+          }
+
+          div:first-child {
+            height: 10px !important;
+            width: 10px !important;
+          }
+        }
+      }
+
+      &--group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: stretch;
+        align-items: center;
+        background: $white;
+        color: $black;
+        padding: 20px 0;
+        width: 100%;
+
+        .item {
+          margin: 20px 0;
+          text-align: center;
+          width: 350px;
+
+          p {
+            color: $black;
+            font-size: 16px;
+
+            strong {
+              font-size: 40px;
+              font-weight: 500;
+              line-height: 0;
+              margin-right: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

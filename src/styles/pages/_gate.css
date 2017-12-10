@@ -1,0 +1,100 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2017 Barracks Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+.gate {
+  &__header {
+    background: $green-500;
+    color: $white;
+    overflow: hidden;
+    margin-bottom: -250px;
+    padding: 40px 0 290px;
+    position: relative;
+    text-align: center;
+
+    &::before,
+    &::after {
+     border: 50px solid white;
+     border-radius: 50%;
+     content: '';
+     height: 1200px;
+     left: 50%;
+     position: absolute;
+     top: 80px;
+     transform: translate(-50%, -50%);
+     width: 1200px;
+    }
+
+    &::before {
+     animation: WAVE-SCALE 4s infinite;
+    }
+
+    &::after {
+     animation: WAVE-SCALE 4.2s infinite;
+     border: 10px solid white;
+     height: 1000px;
+     width: 1000px;
+    }
+
+    h1 {
+      font-size: 35px;
+      font-weight: 400;
+      margin: 0 0 5px 0;
+      position: relative;
+      z-index: 2;
+
+      a {
+        color: $white;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .slogan {
+      font-size: 17px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__content {
+   position: relative;
+ }
+}
+
+@keyframes WAVE-SCALE {
+  0% {
+    transform: translate(-50%, -50%) scale(.6, .6);
+    opacity: 0;
+  }
+  20% {
+    opacity: .08;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1, 1);
+    opacity: 0;
+  }
+}

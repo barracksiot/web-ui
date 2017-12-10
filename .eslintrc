@@ -1,0 +1,58 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "standard-react",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "babel",
+    "react",
+    "promise"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "__BASENAME__": false,
+    "__DEV__": false,
+    "__TEST__": false,
+    "__PROD__": false,
+    "__COVERAGE__": false,
+    "dataLayer": false,
+    "describe": false,
+    "it": false,
+    "before": false,
+    "beforeEach": false,
+    "after": false,
+    "afterEach": false,
+    "expect": false,
+    "sinon": false
+  },
+  "rules": {
+    "key-spacing": 0,
+    "jsx-quotes": [2, "prefer-double"],
+    "max-len": [2, {
+      "code": 240,
+      "tabWidth": 2,
+      "ignoreComments": true,
+      "ignoreTrailingComments": true,
+      "ignoreStrings": true,
+      "ignoreUrls": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreRegExpLiterals": true
+    }],
+    "object-curly-spacing": [2, "always"],
+    "react/no-unused-prop-types": 0,
+    "react/no-find-dom-node": 1,
+    "react/jsx-no-bind": [2, {
+      "allowBind": true,
+      "allowArrowFunctions": true
+    }]
+  }
+}
