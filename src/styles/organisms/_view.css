@@ -1,0 +1,172 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2017 Barracks Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+.view {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+
+  @media ($breakpoint-max-md) {
+    display: block;
+    height: auto;
+    padding-top: 85px;
+  }
+
+  & > header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: center;
+    min-height: 85px;
+
+    @media ($breakpoint-max-sm) {
+      flex-direction: column;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: stretch;
+      align-items: stretch;
+      margin: 20px 40px;
+      min-height: 45px;
+
+      @media ($breakpoint-max-sm) {
+        margin: 20px;
+      }
+
+      .back {
+        color: $green-500;
+        display: block;
+        font-size: 12px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .contextual-help {
+        display: inline-block;
+        font-size: 18px;
+
+        @media ($breakpoint-max-sm) {
+          display: none;
+        }
+
+        button {
+          color: $gray-300;
+          cursor: pointer;
+          transition: all ease-out .3s;
+
+        }
+      }
+
+      h2 {
+        color: $black;
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 1em;
+
+        a {
+          color: $green-500;
+        }
+
+        button {
+          color: $gray-300;
+          cursor: pointer;
+          font-size: 16px;
+          margin: 0 10px;
+          position: relative;
+          top: -1px;
+          transition: all ease-out .3s;
+
+          &:hover,
+          &:focus {
+            color: $gray-500;
+          }
+        }
+
+        .quantity {
+          color: $gray-300;
+          margin-left: 6px;
+        }
+      }
+
+      h3 {
+        color: $black;
+        font-weight: normal;
+        font-style: italic;
+        padding: 0;
+      }
+    }
+
+    .cta {
+      display: flex;
+      margin: 20px 40px;
+
+      @media ($breakpoint-max-sm) {
+        margin: 20px;
+      }
+
+      a,
+      button {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        margin-left: 10px;
+        min-width: initial;
+        padding: 12px 14px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  & > .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media ($breakpoint-max-md) {
+      height: auto;
+    }
+  }
+
+  h3 {
+    font-size: 14px;
+    padding: 16px 40px 0;
+  }
+}

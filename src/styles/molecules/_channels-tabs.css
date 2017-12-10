@@ -1,0 +1,124 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2017 Barracks Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+.channels-tabs {
+  align-content: stretch;
+  align-items: center;
+  border-bottom: 1px solid $green-500;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 11px 0 30px;
+  min-height: 61px;
+  overflow: hidden;
+  padding: 0 40px;
+
+  ol {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+
+    li {
+      margin-right: 30px;
+      text-transform: uppercase;
+
+      .tab {
+        border-bottom: 3px solid transparent;
+        cursor: pointer;
+        display: block;
+        padding: 0 0 15px 0;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+
+          .title {
+            color: $green-500;
+          }
+        }
+
+        .name {
+          display: inline-block;
+          max-width: 150px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          vertical-align: top;
+          white-space: nowrap;
+        }
+      }
+
+      &.current .tab {
+        border-bottom-color: $green-500;
+
+        .title {
+          color: $green-500;
+        }
+      }
+
+      .default {
+        color: $gray-300;
+        display: inline-block;
+        font-size: 14px;
+        margin-left: 4px;
+      }
+
+      .devices-number {
+        color: $gray-300;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .manage-channels {
+    font-size: 14px;
+    margin-bottom: 11px;
+
+    a {
+      color: $gray-500;
+      display: block;
+      transition: all .3s ease-out;
+
+      &:hover,
+      &:focus {
+        color: $green-500;
+        text-decoration: none;
+
+        .fa {
+          opacity: 1;
+        }
+      }
+
+      .fa {
+        color: $green-500;
+        margin-right: 6px;
+        opacity: 0;
+        transition: all .3s ease-out;
+      }
+    }
+  }
+}

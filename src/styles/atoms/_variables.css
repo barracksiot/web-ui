@@ -1,0 +1,126 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2017 Barracks Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/**
+ * Font settings
+ */
+
+$base-font-size:    100%;
+$base-line-height:  1.75;
+$base-rem:          18px;
+
+$font-serif:        Times, serif;
+$font-sans-serif:   Palanquin, Helvetica, Arial, sans-serif;
+
+
+/**
+ * Media queries
+ */
+
+$breakpoint-max-xs: "max-width: 580px";
+$breakpoint-max-sm: "max-width: 700px";
+$breakpoint-max-md: "max-width: 980px";
+$breakpoint-max-lg: "max-width: 1200px";
+
+$breakpoint-min-xs: "min-width: 581px";
+$breakpoint-min-sm: "min-width: 701px";
+$breakpoint-min-md: "min-width: 981px";
+$breakpoint-min-lg: "min-width: 1201px";
+
+
+/**
+ * Radius
+ */
+
+$border-radius:            2px;
+
+
+/**
+ * Colors
+ */
+
+$white:                    #FFF;
+$black:                    #000;
+
+$gray-100:                 #F6F6F6;
+$gray-300:                 #CAD2CF;
+$gray-500:                 #7e7e7e;
+$gray-600:                 #676767;
+$gray-900:                 #031f15;
+
+$green-100:                #E7F8F2;
+$green-500:                #12B67B;
+$green-700:                #818f8a;
+$green-900:                #00432A;
+
+$orange-100:               #FEF5E8;
+$orange-500:               #FFAF25;
+$orange-600:               #FF8625;
+$orange-700:               #FF5825;
+
+$red-100:                  #FDF1F1;
+$red-500:                  #FF2525;
+
+$blue-100:                 #F1F7FD;
+$blue-500:                 #25BEFF;
+
+$color-facebook-200:       #2c4da9;
+$color-facebook-500:       #2d4486;
+$color-facebook-700:       #1b2f68;
+
+$color-twitter-200:        #6bb6ea;
+$color-twitter-500:        #5ea9dd;
+$color-twitter-700:        #519ed4;
+
+$color-google-200:         #ed5643;
+$color-google-500:         #cc3732;
+$color-google-700:         #b72a2a;
+
+$color-youtube-200:        #dd242a;
+$color-youtube-500:        #cc181e;
+$color-youtube-700:        #ba171c;
+
+$color-pinterest-200:      #e52128;
+$color-pinterest-500:      #ca232e;
+$color-pinterest-700:      #b71c26;
+
+$color-linkedin-500:       #007bb6;
+
+$color-instagram-500:      #2c5c81;
+
+
+/**
+ * Help tiles
+ */
+
+$joyride-tooltip-arrow-size: 0;
+$joyride-close-visible: false;
+$joyride-tooltip-border-radius: 2px;
+$joyride-header-border-width: 0;
+$joyride-beacon-color: $orange-500;
+$joyride-button-border-radius: 2px;

@@ -1,0 +1,296 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2017 Barracks Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+.btn,
+button,
+input[type="submit"] {
+  cursor: pointer;
+  font-family: $font-sans-serif;
+  line-height: 24px;
+}
+
+.btn,
+input[type="submit"] {
+  background: $green-500;
+  background-image: none;
+  border: 1px solid $green-500;
+  border-radius: $border-radius;
+  box-shadow: 0 0 6px rgba($green-500, .2);
+  color: $white;
+  display: inline-block;
+  font-size: 20px;
+  font-family: $font-sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin: 0;
+  min-width: 150px;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transition: background, color, border, box-shadow .3s ease-out;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    box-shadow: 0 2px 10px rgba($green-500, .6);
+    outline: none;
+    text-decoration: none !important;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    background: $gray-300;
+    border-color: $gray-300;
+    box-shadow: none;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+
+/**
+ * Button Sizes
+ */
+
+.btn--full {
+  width: 100%;
+}
+
+.btn--large {
+  font-size: 20px;
+  padding: 15px 25px;
+}
+
+.btn--small {
+  font-size: 14px;
+  min-width: auto;
+  padding: 10px 15px;
+}
+
+.btn--danger {
+  background: $red-500;
+  border: 1px solid $red-500;
+  box-shadow: 0 0 6px rgba($red-500, .2);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    box-shadow: 0 2px 10px rgba($red-500, .6);
+  }
+
+  &[disabled] {
+    color: $gray-900;
+  }
+}
+
+.btn--alt {
+  background: $white;
+  border: 1px solid currentColor;
+  color: $green-500;
+
+  &.btn--danger {
+    color: $red-500;
+
+    &[disabled] {
+      color: $gray-900;
+    }
+  }
+}
+
+.btn--circle {
+  background: $white;
+  color: $green-500;
+  height: 50px;
+  font-size: 20px;
+  min-width: 0;
+  padding: 14px 0 0 12px;
+  text-align: center;
+  width: 50px;
+}
+
+
+/**
+ * Link buttons
+ */
+
+.btn--link,
+.btn--link.active {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: $green-500;
+  font-size: 16px;
+  font-weight: normal;
+  border-radius: 0;
+  padding: 0;
+  min-width: auto;
+
+  &.btn--error,
+  &.btn--danger {
+    color: $red-500;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $red-500;
+    }
+  }
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: $green-700;
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    border: none;
+    background: none;
+    color: $gray-300;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+
+/**
+ * Group buttons
+ */
+
+.btn-group {
+  display: block;
+  margin: 0;
+  position: relative;
+  width: 100%;
+
+  .btn {
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+    @media ($breakpoint-max-sm) {
+      margin: 10px 0;
+    }
+  }
+
+  &.btn-group--left {
+    text-align: left;
+
+    .btn {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+
+  &.btn-group--center {
+    text-align: center;
+
+    .btn {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+
+  &.btn-group--right {
+    text-align: right;
+
+    .btn {
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+
+  &.btn-group--full {
+    .btn {
+      display: block;
+      width: 100%
+    }
+  }
+
+  &.btn-group--opposite {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: center;
+
+    @media ($breakpoint-max-sm) {
+      flex-direction: column;
+    }
+
+    .btn {
+      margin-left: 0;
+      margin-right: 0;
+
+      @media ($breakpoint-max-sm) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  & + p,
+  & + ul,
+  & + ol {
+    margin-top: 20px;
+  }
+}
+
+
+/**
+ * Specificity overrides
+ */
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-group {
+    width: 100%;
+  }
+}

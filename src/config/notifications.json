@@ -1,0 +1,272 @@
+{
+  "loader": {
+    "type": "loading",
+    "title": "",
+    "message": "",
+    "closable": false,
+    "duration": 0
+  },
+
+  "success_ask_reset_password": {
+    "type": "success",
+    "title": "Roger!",
+    "message": "An email has been sent to your address to reset your password.",
+    "closable": true,
+    "duration": 10000
+  },
+  "success_password_updated": {
+    "type": "success",
+    "title": "Roger!",
+    "message": "Your password has been set. You can now log in",
+    "closable": true,
+    "duration": 10000
+  },
+  "success_profile_updated": {
+    "type": "success",
+    "title": "Profile updated",
+    "message": "Your profile has been updated.",
+    "closable": true,
+    "duration": 10000
+  },
+  "success_change_device_channel": {
+    "type": "success",
+    "title": "Devices have been moved",
+    "message": "",
+    "closable": true,
+    "duration": 10000
+  },
+  "success_filter_deleted": {
+    "type": "success",
+    "title": "Filter deleted",
+    "message": "The filter has been deleted",
+    "closable": true,
+    "duration": 10000
+  },
+  "success_payment_method_validated": {
+    "type": "success",
+    "title": "Your billing method has been validated",
+    "message": "",
+    "closable": true,
+    "duration": 10000
+  },
+  "success_version_created": {
+    "type": "success",
+    "title": "Version created",
+    "message": "Your version has been created.",
+    "closable": true,
+    "duration": 10000
+  },
+  "success_password_updated": {
+    "type": "success",
+    "title": "Roger!",
+    "message": "Your password has been set. You can now log in",
+    "closable": true,
+    "duration": 10000
+  },
+
+  "error_generic": {
+    "type": "error",
+    "title": "An error occured",
+    "message": "If this error persists, please contact support.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_bad_gateway": {
+    "type": "error",
+    "title": "Bad Gateway",
+    "message": "The service seems to be down, contact support if the problem persists.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_authentication_failed_bad_credentials": {
+    "type": "error",
+    "title": "Authentication failed",
+    "message": "Please verify your login information.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_account_already_exist": {
+    "type": "error",
+    "title": "Sorry, this account already exists",
+    "message": "Please try to log in, or you can reset your password.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_account_not_exist": {
+    "type": "error",
+    "title": "Sorry, this account doesn't exist",
+    "message": "Please verify the email you have provided is correct.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_account_invalid_password": {
+    "type": "error",
+    "title": "Password invalid or too weak",
+    "message": "Please verify the submitted password.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_update_bad_request": {
+    "type": "error",
+    "title": "Some fields are missing",
+    "message": "Please verify all required fields are correct.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_update_create_conflict": {
+    "type": "error",
+    "title": "Version ID already used",
+    "message": "Please change the name of your Version ID.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_update_invalid_additionnal_properties": {
+    "type": "error",
+    "title": "Invalid additionnal properties",
+    "message": "Please verify your additionnal properties are in a well formed JSON.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_package_bad_request": {
+    "type": "error",
+    "title": "Some fields are missing",
+    "message": "Please verify all required fields are correct.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_package_create_conflict": {
+    "type": "error",
+    "title": "Reference already used",
+    "message": "Please change the name of your Reference.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_plan_validation_failed": {
+    "type": "error",
+    "title": "Validation failed",
+    "message": "Please verify all required fields are correct.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_plan_malformed": {
+    "type": "error",
+    "title": "Validation failed",
+    "message": "The JSON sent is probably malformed.",
+    "closable": true,
+    "duration": 10000
+  },
+  "success_deploymen_plan_updated": {
+    "type": "success",
+    "title": "Deployment plan saved",
+    "message": "Your deployment plan has been updated",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_billing_precondition_failed": {
+    "type": "error",
+    "title": "Empty or invalid fields",
+    "message": "Please verify all required fields are correct.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_filter_validation_failed": {
+    "type": "error",
+    "title": "Validation failed",
+    "message": "Please verify all required fields are correct.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_filter_malformed": {
+    "type": "error",
+    "title": "Validation failed",
+    "message": "The JSON sent is probably malformed.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_filter_create_conflict": {
+    "type": "error",
+    "title": "Id already used",
+    "message": "Please change the name of your filter.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_version_bad_request": {
+    "type": "error",
+    "title": "Some fields are missing",
+    "message": "Please verify all required fields are correct.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_version_validation_failed": {
+    "type": "error",
+    "title": "Validation failed",
+    "message": "Please verify all required fields are correct.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_version_malformed": {
+    "type": "error",
+    "title": "Validation failed",
+    "message": "The JSON sent is probably malformed.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_version_create_conflict": {
+    "type": "error",
+    "title": "Name already used",
+    "message": "Please change the name of your version Id.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_filter_delete_conflict": {
+    "type": "error",
+    "title": "Filter in use",
+    "message": "Your filter can't be deleted because it's currently used by a deployment plan.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_segment_validation_failed": {
+    "type": "error",
+    "title": "Validation failed",
+    "message": "Please verify all required fields are correct.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_devices_bad_request": {
+    "type": "error",
+    "title": "Invalid request",
+    "message": "Please verify the request is correct.",
+    "closable": true,
+    "duration": 10000
+  },
+  "error_profile_validation_failed": {
+    "type": "error",
+    "title": "Invalid field",
+    "message": "Please verify all fields are correct.",
+    "closable": true,
+    "duration": 10000
+  },
+
+  "warning_change_device_channel_empty": {
+    "type": "warning",
+    "title": "No device has been selected",
+    "message": "",
+    "closable": true,
+    "duration": 10000
+  },
+  "warning_billing_not_verified_account": {
+    "type": "warning",
+    "title": "Your account wasn't verified",
+    "message": "",
+    "closable": true,
+    "duration": 10000
+  },
+
+  "info_logout": {
+    "type": "info",
+    "title": "You have been sucessfully logged out",
+    "message": "",
+    "closable": true,
+    "duration": 10000
+  }
+}

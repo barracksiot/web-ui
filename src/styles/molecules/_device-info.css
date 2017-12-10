@@ -1,0 +1,203 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2017 Barracks Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+.device-info {
+
+  .dates {
+
+    margin: 0 0 20px 40px;
+
+    @media ($breakpoint-min-md) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+      align-items: flex-start;
+      border-bottom: 2px solid $gray-100;
+    }
+
+    & > div {
+      font-size: 18px;
+      flex: 0 1 auto;
+      margin-right: 40px;
+    }
+
+    h5 {
+      color: black;
+      font-weight: 300;
+      font-size: 15px;
+    }
+  }
+
+  .groupInfo {
+    background: $gray-100;
+    margin: 0;
+    position: relative;
+
+    @media ($breakpoint-min-md) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+      align-items: stretch;
+      border-bottom: 2px solid $gray-100;
+    }
+
+    @media ($breakpoint-max-md) {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+      align-items: stretch;
+      border-bottom: 2px solid $gray-100;
+    }
+
+    .info {
+      flex: 1 1 auto;
+      background: $white;
+
+      @media ($breakpoint-min-md) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: flex-start;
+      }
+
+      @media ($breakpoint-max-md) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: stretch;
+        order:2;
+      }
+
+      & > div {
+        padding: 30px 40px;
+
+        @media ($breakpoint-max-md) {
+          & + div {
+            border-top: 2px solid $gray-100;
+          }
+        }
+
+        @media ($breakpoint-min-md) {
+          flex: 1 1 50%;
+          align-self: stretch;
+          overflow: auto;
+          -webkit-overflow-scrolling: touch;
+
+          & + div {
+            border-left: 2px solid $gray-100;
+          }
+        }
+      }
+
+      strong {
+        font-size: 16px;
+      }
+
+      .request {
+        p {
+          margin-bottom: 20px;
+        }
+
+        & > div {
+          margin-bottom: 35px;
+        }
+      }
+
+      .response {
+         & > div {
+          margin-bottom: 15px;
+        }
+      }
+
+      h2 {
+        width: 100%;
+        text-align: center;
+        color: $gray-500;
+        font-weight: 300;
+        margin-bottom: 20px;
+      }
+
+      span {
+        margin-right: 6px;
+      }
+    }
+
+    .pings {
+      background: $gray-100;
+      overflow: auto;
+      flex: 0 0 200px;
+      position:relative;
+      max-height: 600px;
+
+      @media ($breakpoint-max-md) {
+        flex: 0 0 auto;
+        border-top: 1px solid $gray-300;
+        order:1;
+        max-height: 200px;
+      }
+
+      ul {
+        padding: 20px 0;
+
+        li {
+          transform: translateX(-2px);
+          padding: 5px 20px;
+          border: 2px solid rgba(0,0,0,0);
+          border-right: none;
+          font-size: 15px;
+          cursor: pointer;
+        }
+
+        .selected {
+          background: $white;
+          border-bottom: 1px solid $gray-300;
+          border-top: 1px solid $gray-300;
+          border-left: 2px solid $white;
+        }
+
+        li:hover {
+          background: $white;
+        }
+      }
+
+      &:before {
+        content: '';
+        width:1px;
+        height: 100%;
+        background-color: $gray-300;
+        position: absolute;
+      }
+    }
+  }
+}

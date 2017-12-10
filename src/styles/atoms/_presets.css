@@ -1,0 +1,135 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2017 Barracks Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: $gray-100;
+  color: $green-900;
+  font-family: $font-sans-serif;
+  font-size: $base-rem;
+  line-height: $base-line-height;
+  overflow-x: hidden;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 24px;
+}
+
+small {
+  display: block;
+  line-height:13px;
+  font-size: 11px;
+}
+
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+li {
+  font-size: 20px;
+  line-height: $base-line-height;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  color: $green-900;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline-width: 0;
+    text-decoration: underline;
+  }
+}
+
+button {
+  border: 0;
+  background: none;
+  display: inline-block;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    outline-width: 0;
+    text-decoration: underline;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+fieldset {
+  padding: 10px 30px;
+
+  & + fieldset {
+    margin-top: 5px;
+  }
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+code,
+.code {
+  font-family: monospace, monospace;
+}

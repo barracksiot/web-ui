@@ -1,0 +1,41 @@
+{
+  "routes": {
+    "packages":                   "/packages",
+    "createPackage":              "/packages/create",
+    "devices":                    "/devices",
+    "filters":                    "/filters",
+    "createFilter":               "/filters/create",
+    "support":                    "/",
+    "account":                    "/account"
+  },
+  "tools": {
+    "emulator":                   "http://barracksiot.github.io/emulator/"
+  },
+  "website": {
+    "root":                       "https://barracks.io/"
+  },
+  "documentation": {
+    "root":                       "https://barracks.io/support/",
+    "filter":                     "https://barracks.io/support/application-management/filters-what-are-they-how-to-use-them/",
+    "plan":                       "https://barracks.io/support/application-management/associate-filters-to-version-to-create-a-deployment-plan/",
+    "services": {
+      "authorization":            "/api/auth/docs/index.html",
+      "device":                   "/api/device/docs/index.html",
+      "member":                   "/v2/api/member/docs/index.html"
+    }
+  },
+  "github": {
+    "python":                     "https://github.com/barracksiot/python-client",
+    "pythonDocumentation":        "https://github.com/barracksiot/python-client/blob/master/README.md",
+    "javascript":                 "https://github.com/barracksiot/javascript-client",
+    "javascriptV2":               "https://github.com/barracksiot/javascript-client/tree/v2",
+    "javascriptDocumentation":    "https://github.com/barracksiot/javascript-client/blob/master/README.md",
+    "javascriptDocumentationV2":  "https://github.com/barracksiot/javascript-client/blob/v2/README.md",
+    "android":                    "https://github.com/barracksiot/android-client",
+    "androidDocumentation":       "http://barracksiot.github.io/android-client/",
+    "osx":                        "https://github.com/barracksiot/ios-osx-client",
+    "osxDocumentation":           "http://barracksiot.github.io/ios-osx-client/docs/",
+    "cliGithub":                  "https://github.com/barracksiot/barracks-cli",
+    "cliNpm":                     "https://www.npmjs.com/package/barracks-cli"
+  }
+}
